@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="refresh" content="0; url=./" />
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+      // Redirect all 404s to the app root, preserving the path for React Router
+      var l = window.location;
+      var repo = '/voting-app';
+      var newUrl = l.origin + repo + '/#' + l.pathname.replace(repo, '') + l.search + l.hash;
+      window.location.replace(newUrl);
+    </script>
   </head>
   <body></body>
 </html>
